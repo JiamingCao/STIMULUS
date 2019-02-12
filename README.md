@@ -1,5 +1,5 @@
 # Codes for the STIMULUS paper
-- GenerateFactorTable.m pre-calculates a look-up table of AFDs given electrode locations; results included
+- GenerateFactorTable.m pre-calculates a look-up table of AFDs given electrode locations; run this first before STIMULUS_all*.m
 - STIMULUS_all*.m calculates results using STIMULUS
 - TI_resistors.m caculates TI stimulation results
 - generage_figure.m loads pre-calculated results and generates Fig.8-Fig.12
