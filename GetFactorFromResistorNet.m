@@ -36,5 +36,5 @@ end
 parfor i = 1:length(anode_ind)
     V_at_node = lsqr(Ymat, Imat(:,i), [], 50000);
     Vzz = (Az * V_at_node);
-    factors(:, i) = gather(abs(Vzz)/d^2);
+    factors(:, i) = gather((Vzz)/d^2);
 end

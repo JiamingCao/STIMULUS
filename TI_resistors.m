@@ -17,7 +17,7 @@ else
 end
 freq = f_center + freq_shift;
 %% Discretize space and calculate factors
-CenterAmplitude = 440; % change this (uA/cm^2)
+CenterAmplitude = 185; % change this (uA/cm^2)
 Fs = 25;
 vstart = -70;
 twidth = 1000;
@@ -84,7 +84,7 @@ focus = 0.4;
 factors = factors./factors(sub2ind(size(X), ceil(num_x/2),ceil(num_y/2),idx_focus),:)*CenterAmplitude;
 % factors = factors * scale;
 % currentmag = currentmag/currentmag(sub2ind(size(X),ceil(num_x/2),ceil(num_y/2),ceil(num_z/2)),1)*CenterAmplitude;
-roi = nodes_in_sphere == 1;% & nodes(:,3)>0.36 & nodes(:,3)<0.44;
+roi = nodes_in_sphere == 1; % & nodes(:,3)>0.36 & nodes(:,3)<0.44;
 factors2 = factors(roi,:);
 fire = nan(size(factors,1), 1);
 fire2 = nan(size(factors2, 1), 1);
